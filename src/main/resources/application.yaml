@@ -1,0 +1,31 @@
+server:
+  port : 8081
+person:
+  last-name : 陈观豪
+  age : 18
+  boss : true
+  birth : 2019/6/3
+  maps : {adress: shenzhen,nation: guangdong}
+  lists:
+    - xiaojiao
+    - shiyan
+    - baicheng
+  dog:
+    name: tiandong
+    age: 1
+
+
+personValue:
+  name: personvalue
+  age: 22
+logging:
+  level:
+    com:
+      cgh:
+        first:
+          trace
+spring:
+  profiles:
+    active: prod
+  thymeleaf:
+    cache: false

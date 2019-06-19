@@ -1,0 +1,11 @@
+2019-06-04 11:13:33.327  INFO 7172 --- [main] com.cgh.first.FirstApplicationTests      : Starting FirstApplicationTests on PC-201906021611 with PID 7172 (started by Administrator in F:\Project)
+2019-06-04 11:13:33.328 DEBUG 7172 --- [main] com.cgh.first.FirstApplicationTests      : Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2019-06-04 11:13:33.328  INFO 7172 --- [main] com.cgh.first.FirstApplicationTests      : The following profiles are active: dev
+2019-06-04 11:13:34.875  INFO 7172 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-04 11:13:35.103  INFO 7172 --- [main] com.cgh.first.FirstApplicationTests      : Started FirstApplicationTests in 2.227 seconds (JVM running for 2.974)
+2019-06-04 11:13:35.326 TRACE 7172 --- [main] com.cgh.first.FirstApplicationTests      : This is trace
+2019-06-04 11:13:35.326 DEBUG 7172 --- [main] com.cgh.first.FirstApplicationTests      : This is debug
+2019-06-04 11:13:35.326  INFO 7172 --- [main] com.cgh.first.FirstApplicationTests      : This is info
+2019-06-04 11:13:35.326  WARN 7172 --- [main] com.cgh.first.FirstApplicationTests      : This is warn
+2019-06-04 11:13:35.326 ERROR 7172 --- [main] com.cgh.first.FirstApplicationTests      : This is error
+2019-06-04 11:13:35.331  INFO 7172 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
