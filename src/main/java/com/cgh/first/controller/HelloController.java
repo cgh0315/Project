@@ -27,7 +27,12 @@ public class HelloController {
     @RequestMapping("/hello")
     @ResponseBody
     public String SayHello(){
-        return "hello";
+        return "hello".toUpperCase();
+    }
+
+    @RequestMapping({"/","/index.html"})
+    public String index(){
+        return "login";
     }
 
     @RequestMapping("/object")
