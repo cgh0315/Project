@@ -30,7 +30,7 @@ public class HelloController {
         return "hello".toUpperCase();
     }
 
-    @RequestMapping({"/","/index.html"})
+    @RequestMapping({"/index.html"})
     public String index(){
         return "login";
     }
