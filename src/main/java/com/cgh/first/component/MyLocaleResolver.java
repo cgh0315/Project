@@ -12,8 +12,11 @@ public class MyLocaleResolver implements LocaleResolver {
     @Override
     public Locale resolveLocale(HttpServletRequest request) {
         String l = request.getParameter("l");
-        String[] split = l.split("_");
-        Locale locale = new Locale(split[0],split[1]);
+        Locale locale = Locale.getDefault();
+        if (!StringUtils.isEmpty(l)) {
+            String[] split = l.split("_");
+            locale = new Locale(split[0], split[1]);
+        }
         return locale;
     }
 
