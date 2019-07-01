@@ -3,9 +3,11 @@ package com.cgh.first.controller;
 import com.cgh.first.bean.Person;
 import com.cgh.first.bean.PersonValue;
 import com.cgh.first.bean.Property;
+import com.cgh.first.exception.UserNotExistException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,9 +26,12 @@ public class HelloController {
     @Autowired
     Property propertySrc;
 
-    @RequestMapping("/hello")
+    @RequestMapping("/crud/hello")
     @ResponseBody
-    public String SayHello(){
+    public String SayHello(@RequestParam("user") String user){
+        if (user.equals("aaa")){
+            throw new UserNotExistException();
+        }
         return "hello".toUpperCase();
     }
 
