@@ -29,3 +29,5 @@ spring:
     active: prod
   thymeleaf:
     cache: false
+  mvc:
+    date-format: yyyy-MM-dd
