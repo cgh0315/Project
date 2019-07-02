@@ -5,12 +5,15 @@ import com.cgh.first.servlet.MyFilter;
 import com.cgh.first.servlet.MyListener;
 import com.cgh.first.servlet.MyServlet;
 import org.springframework.boot.web.embedded.jetty.ConfigurableJettyWebServerFactory;
+import org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory;
+import org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory;
 import org.springframework.boot.web.server.ConfigurableWebServerFactory;
 import org.springframework.boot.web.server.WebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -46,15 +49,16 @@ public class MyConfig {
         return registrationBean;
     }
 
-    @Bean
-    public WebServerFactoryCustomizer<ConfigurableJettyWebServerFactory> webServerFactoryCustomizer(){
-        return new WebServerFactoryCustomizer<ConfigurableJettyWebServerFactory>() {
+//    @Bean public ServletWebServerFactory servletContainer() {
+//        JettyServletWebServerFactory jetty = new JettyServletWebServerFactory();
+//        jetty.setPort(9999);
+//        return jetty;
+//    }
 
-            @Override
-            public void customize(ConfigurableJettyWebServerFactory factory) {
-                factory.setPort(9001);
-                System.out.println("Jetty.....");
-            }
-        };
+    @Bean
+    public ServletWebServerFactory servletUndertowContainer(){
+        UndertowServletWebServerFactory undertow = new UndertowServletWebServerFactory();
+        undertow.setPort(7777);
+        return undertow;
     }
 }
