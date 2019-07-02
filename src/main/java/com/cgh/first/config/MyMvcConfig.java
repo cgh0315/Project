@@ -35,6 +35,8 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
         return adapter;
     }
 
+
+
     @Bean(name="localeResolver")
     public LocaleResolver getLocalResolver(){
         return new MyLocaleResolver();
