@@ -25,26 +25,26 @@ public class MyConfig {
         System.out.println("给容器添加主见了");
         return new HelloService();
     }
-
-    @Bean
-    public ServletRegistrationBean servlet(){
-        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new MyServlet(), "/myServlet");
-        servletRegistrationBean.setLoadOnStartup(1);
-        return servletRegistrationBean;
-    }
-
-    @Bean
-    public FilterRegistrationBean filter(){
-        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new MyFilter());
-        filterRegistrationBean.setUrlPatterns(Arrays.asList("/filter","/myServlet"));
-        return filterRegistrationBean;
-    }
-
-    @Bean
-    public ServletListenerRegistrationBean listener(){
-        ServletListenerRegistrationBean<MyListener> registrationBean = new ServletListenerRegistrationBean<>(new MyListener());
-        return registrationBean;
-    }
+//
+//    @Bean
+//    public ServletRegistrationBean servlet(){
+//        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new MyServlet(), "/myServlet");
+//        servletRegistrationBean.setLoadOnStartup(1);
+//        return servletRegistrationBean;
+//    }
+//
+//    @Bean
+//    public FilterRegistrationBean filter(){
+//        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new MyFilter());
+//        filterRegistrationBean.setUrlPatterns(Arrays.asList("/filter","/myServlet"));
+//        return filterRegistrationBean;
+//    }
+//
+//    @Bean
+//    public ServletListenerRegistrationBean listener(){
+//        ServletListenerRegistrationBean<MyListener> registrationBean = new ServletListenerRegistrationBean<>(new MyListener());
+//        return registrationBean;
+//    }
 
     @Bean
     public WebServerFactoryCustomizer<ConfigurableJettyWebServerFactory> webServerFactoryCustomizer(){
