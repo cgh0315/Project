@@ -1,16 +1,8 @@
 package com.cgh.first.config;
 
 import com.cgh.first.service.HelloService;
-import com.cgh.first.servlet.MyFilter;
-import com.cgh.first.servlet.MyListener;
-import com.cgh.first.servlet.MyServlet;
 import org.springframework.boot.web.embedded.jetty.ConfigurableJettyWebServerFactory;
-import org.springframework.boot.web.server.ConfigurableWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
