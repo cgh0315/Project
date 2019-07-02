@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 import java.util.Collection;
 
 @Controller
-public class EmployController {
+class EmployController {
 
     @Resource
     EmployeeDao employeeDao;
